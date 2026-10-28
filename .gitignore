@@ -25,3 +25,4 @@ dist-ssr
 
 # Temp files
 fb_page_text.txt
+*.pdf
