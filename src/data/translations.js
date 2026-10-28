@@ -14,18 +14,20 @@ export const translations = {
       titleStart: "শিক্ষায় আলো,",
       titleHighlight: "মানবতার সেবায়",
       titleEnd: "দৃঢ় অঙ্গীকার",
+      motto: "“জনকল্যাণে আমাদের পথচলা — সততার আলো ছড়িয়ে পড়ুক চারদিকে। সমাজের পিছিয়ে পড়া জনগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষুদ্র প্রয়াস।”",
       subtitle: "সুবিধাবঞ্চিত গ্রামীণ শিক্ষার্থীদের ফ্রি শিক্ষা ও মেন্টরশিপ, দুঃস্থদের জরুরি চিকিৎসা সহায়তা এবং পরিবেশ রক্ষায় বৃক্ষরোপণ সহ নানামুখী সেবামূলক কার্যক্রমে নিবেদিত জনকল্যাণমূলক প্রতিষ্ঠান।",
       ctaDonate: "সহায়তার হাত বাড়ান",
       ctaActivities: "আমাদের কার্যক্রম",
       ctaNotice: "সর্বশেষ নোটিস ও ক্লাস",
       locationBadge: "ফুলবাড়ী, দিনাজপুর, বাংলাদেশ",
+      collaboratorBadge: "সহযোগিতায়: মননশীল",
     },
     noticeBoard: {
       badge: "ঘোষণা ও আপডেট",
       title: "চলমান নোটিস ও শিক্ষামূলক কার্যক্রম",
       subtitle: "নতুন ক্লাসের ব্যাচ, স্কলারশিপ তথ্য ও স্বেচ্ছাসেবী কার্যক্রম সংক্রান্ত সর্বশেষ আপডেট।",
       emptyState: "বর্তমানে নতুন কোনো জরুরি নোটিস নেই। পূর্ববর্তী ক্লাস ও কার্যক্রম নিয়মিত চলমান রয়েছে।",
-      applyBtn: "গুগল ফর্মে আবেদন করুন",
+      applyBtn: "আবেদন ও বিস্তারিত দেখুন",
       viewDetails: "বিস্তারিত দেখুন",
       postedOn: "প্রকাশের তারিখ:",
       sheetSyncStatus: "রিয়েলটাইম গুগল শিট থেকে সংযুক্ত",
@@ -33,8 +35,9 @@ export const translations = {
     about: {
       badge: "আমাদের পরিচিতি",
       title: "মানবতার কল্যাণে একটি নিবেদিত সংগঠন",
+      tagline: "জনকল্যাণে আমাদের পথচলা",
       p1: "জনতা-দেশবন্ধু ফাউন্ডেশন দিনাজপুর জেলার ফুলবাড়ী অঞ্চল থেকে যাত্রা শুরু করা একটি অরাজনৈতিক, অলাভজনক ও সম্পূর্ণ সেবামূলক সামাজিক সংগঠন। গ্রামীণ জনপদের পিছিয়ে পড়া শিক্ষার্থী এবং সাধারণ মানুষের মৌলিক অধিকার ও প্রাথমিক চাহিদা পূরণের তাগিদ থেকেই আমাদের এই ক্ষুদ্র প্রয়াস।",
-      p2: "বিভিন্ন স্বনামধন্য বিশ্ববিদ্যালয়, মেডিকেল কলেজ ও প্রযুক্তি প্রতিষ্ঠানের বর্তমান ও প্রাক্তন শিক্ষার্থীদের দিকনির্দেশনায় আমরা গ্রামের প্রতিটি সম্ভাবনাময় শিক্ষার্থীর মেধার সঠিক বিকাশ ও মানবিক সেবা নিশ্চিত করতে কাজ করছি।",
+      p2: "বিভিন্ন স্বনামধন্য বিশ্ববিদ্যালয়, মেডিকেল কলেজ ও প্রযুক্তি প্রতিষ্ঠানের বর্তমান ও প্রাক্তন শিক্ষার্থীদের দিকনির্দেশনায় আমরা গ্রামের প্রতিটি সম্ভাবনাময় শিক্ষার্থীর মেধার সঠিক বিকাশ ও মানবিক সেবা নিশ্চিত করতে কাজ করছি। সামাজিক উদ্যোগ 'মননশীল'-এর সহযোগিতায় আমাদের সেবামূলক কাজ নিরবচ্ছিন্নভাবে এগিয়ে চলেছে।",
       pillarsTitle: "আমাদের মূল কর্মক্ষেত্রসমূহ",
       pillars: [
         {
@@ -74,48 +77,54 @@ export const translations = {
           id: 1,
           title: "ফ্রি ইংরেজি ও গণিত বেসিক ক্লাস",
           category: "শিক্ষা",
+          image: "/images/activity-3.jpeg",
           desc: "স্কুলের পিছিয়ে পড়া শিক্ষার্থীদের বিষয়ভিত্তিক ভীতি দূর করতে বিভিন্ন বিশ্ববিদ্যালয়ের মেধাবী শিক্ষার্থীদের দ্বারা পরিচালিত নিয়মিত ফ্রি ক্লাস।"
         },
         {
           id: 2,
           title: "জব ফেয়ার ও ক্যারিয়ার কাউন্সেলিং",
           category: "যুব উন্নয়ন",
-          desc: "বিরামপুর ও ফুলবাড়ী অঞ্চলে তরুণদের কর্মসংস্থানমুখী দক্ষতা ও চাকরির সুযোগ বিষয়ক গাইডলাইন প্রদান।"
+          image: "/images/activity-20.jpeg",
+          desc: "বিরামপুর সরকারি কলেজ ও ফুলবাড়ী অঞ্চলে তরুণদের কর্মসংস্থানমুখী দক্ষতা ও চাকরির সুযোগ বিষয়ক গাইডলাইন প্রদান।"
         },
         {
           id: 3,
           title: "উচ্চশিক্ষা বৃত্তি সহায়তা ও দিকনির্দেশনা",
           category: "বৃত্তি",
+          image: "/images/activity-14.jpeg",
           desc: "মেধাবী কিন্তু আর্থিকভাবে অসচ্ছল শিক্ষার্থীদের BIFFL ও CZM সহ জাতীয় পর্যায়ের শিক্ষাবৃত্তির তথ্য ও আবেদন সহায়তা।"
         },
         {
           id: 4,
           title: "বৃক্ষরোপণ ও পরিবেশ সুরক্ষা",
           category: "পরিবেশ",
+          image: "/images/activity-31.jpeg",
           desc: "গ্রামাঞ্চলের পরিবেশের ভারসাম্য রক্ষায় বিভিন্ন শিক্ষা প্রতিষ্ঠান ও সড়কে বৃক্ষরোপণ ও চারা বিতরণ কর্মসূচি।"
         },
         {
           id: 5,
           title: "দুস্থ ও শীতার্ত মানুষের পাশে সহায়তা",
           category: "মানবিক ত্রাণ",
-          desc: "শীতকালে কম্বল বিতরণ, প্রাকৃতিক বিপর্যয়ে জরুরি সহায়তা এবং রোগীদের পাশে দাঁড়ানোর মানবিক উদ্যোগ।"
+          image: "/images/activity-2.jpeg",
+          desc: "শীতকালে বস্ত্র বিতরণ, প্রাকৃতিক বিপর্যয়ে জরুরি সহায়তা এবং রোগীদের পাশে দাঁড়ানোর মানবিক উদ্যোগ।"
         },
         {
           id: 6,
           title: "আইটি ও আধুনিক প্রযুক্তি বিষয়ক কর্মশালা",
           category: "দক্ষতা বৃদ্ধি",
-          desc: "গ্রামীণ তরুণদের কম্পিউটার ও প্রযুক্তিনির্ভর আধুনিক ক্যারিয়ার সম্পর্কে সচেতন করে তোলা।"
+          image: "/images/activity-22.jpeg",
+          desc: "গ্রামীণ তরুণদের কম্পিউটার ও প্রযুক্তিনির্ভর আধুনিক ক্যারিয়ার ও এআই স্কিল সম্পর্কে সচেতন করে তোলা।"
         }
       ]
     },
     gallery: {
       badge: "ছবির অ্যালবাম",
       title: "আমাদের কাজের বাস্তব স্থিরচিত্র",
-      subtitle: "ক্লাসরুম থেকে শুরু করে সামাজিক কর্মকাণ্ডের কিছু স্মরণীয় মুহূর্ত।",
+      subtitle: "দিনাজপুর ও ফুলবাড়ীর ক্লাসরুম থেকে শুরু করে মাঠপর্যায়ের সামাজিক কর্মকাণ্ডের স্মরণীয় মুহূর্ত।",
       all: "সকল ছবি",
       education: "শিক্ষা কার্যক্রম",
-      plantation: "বৃক্ষরোপণ ও প্রকৃতি",
-      events: "ইভেন্ট ও যুব উন্নয়ন",
+      plantation: "বৃক্ষরোপণ কর্মসূচি",
+      events: "ইভেন্ট ও সভা",
     },
     donation: {
       badge: "সহায়তার হাত বাড়ান",
@@ -124,29 +133,33 @@ export const translations = {
       trustPledge: "আমরা প্রতিটি টাকার হিসাব ও ব্যয়ের স্বচ্ছতা বজায় রাখতে অঙ্গীকারাবদ্ধ।",
       copyBtn: "নম্বর কপি করুন",
       copied: "নম্বরটি কপি করা হয়েছে!",
-      qrBtn: "কিউআর কোড দেখুন",
+      qrBtn: "পোস্টার ও মাধ্যম দেখুন",
+      posterBtn: "অফিসিয়াল পোস্টার",
       closeQr: "বন্ধ করুন",
-      sendGuideTitle: "অনুদান পাঠানোর সহজ নিয়মাবলী:",
+      sendGuideTitle: "অনুদান পাঠানোর সহজ নিয়মাবলী (অফিসিয়াল নির্দেশনা অনুযায়ী):",
       steps: [
         "আপনার বিকাশ, নগদ বা রকেট অ্যাপে গিয়ে 'Send Money' অপশন সিলেক্ট করুন।",
         "উপরের দেওয়া নির্দিষ্ট নম্বরে আপনার সামর্থ্য অনুযায়ী যেকোনো পরিমাণ অর্থ পাঠান।",
-        "রেফারেন্সে আপনার নাম অথবা 'Education/Donation' লিখতে পারেন।",
-        "টাকা পাঠানোর পর ট্রানজেকশন আইডি সহ নিচের WhatsApp নম্বরে একটি ছোট মেসেজ দিন যাতে আমরা আপনাকে রশিদ প্রদান করতে পারি।"
+        "রেফারেন্সে আপনার নাম অথবা 'Donation/Education' লিখুন।",
+        "টাকা পাঠানোর পর ট্রানজেকশন আইডি সহ নিচের WhatsApp নম্বরে একটি ছোট মেসেজ দিন বা স্ক্রিনশট পাঠান যাতে আমরা দ্রুত হিসাব সংরক্ষণ ও আপনাকে রসিদ দিতে পারি।"
       ],
       accounts: {
         bkash: {
           title: "বিকাশ (পার্সোনাল)",
-          number: "০১৭XXXXXXXX", // Will use placeholder or configured number
+          recipient: "চিত্ররায় (Chitra Roy)",
+          number: "01786743802",
           type: "Personal Send Money"
         },
         nagad: {
           title: "নগদ (পার্সোনাল)",
-          number: "০১৭XXXXXXXX",
+          recipient: "বিকাশ চন্দ্র (Bikash Chandra)",
+          number: "01814086362",
           type: "Personal Send Money"
         },
         rocket: {
-          title: "রকেট (পার্সোনাল)",
-          number: "০১৭XXXXXXXX-X",
+          title: "রকেট / হেল্পলাইন",
+          recipient: "জাহাঙ্গীর (Md Jahangir Alom)",
+          number: "01780555732",
           type: "Personal Send Money"
         },
         bank: {
@@ -171,13 +184,15 @@ export const translations = {
       addressTitle: "ঠিকানা ও অবস্থান",
       addressText: "ফুলবাড়ী, দিনাজপুর, রংপুর বিভাগ, বাংলাদেশ",
       phoneTitle: "জরুরি হেল্পলাইন",
-      phoneText: "+৮৮০১৭XXXXXXXX",
+      phoneText: "+৮৮০১৭৮৬৭৪৩৮০২, +৮৮০১৮১৪০৮৬৩৬২",
+      phoneSecondary: "+৮৮০১৭৮০৫৫৫৭৩২",
       emailTitle: "ইমেইল",
       emailText: "janatadeshbondhu@gmail.com",
     },
     footer: {
       orgName: "জনতা-দেশবন্ধু ফাউন্ডেশন",
-      tagline: "সুবিধাবঞ্চিত গ্রামীণ মানুষের কল্যাণে একটি নির্ভরযোগ্য স্বেচ্ছাসেবী প্রতিষ্ঠান।",
+      tagline: "জনকল্যাণে আমাদের পথচলা — সুবিধাবঞ্চিত গ্রামীণ মানুষের কল্যাণে একটি নির্ভরযোগ্য স্বেচ্ছাসেবী প্রতিষ্ঠান।",
+      motto: "সততার আলো ছড়িয়ে পড়ুক চারদিকে। সমাজের পিছিয়ে পড়া জনগোষ্ঠীকে এগিয়ে নেওয়ার ক্ষুদ্র প্রয়াস।",
       quickLinks: "প্রয়োজনীয় লিংক",
       legal: "অরাজনৈতিক ও অলাভজনক মানবিক সংগঠন",
       rights: "সর্বস্বত্ব সংরক্ষিত।",
@@ -199,18 +214,20 @@ export const translations = {
       titleStart: "Illuminating Minds,",
       titleHighlight: "Serving Humanity",
       titleEnd: "With Dedication",
+      motto: "“Walking together for public welfare — let the light of honesty spread everywhere. A modest endeavor to uplift marginalized communities.”",
       subtitle: "A non-profit grassroots initiative dedicated to providing free education and mentorship to underprivileged rural students, emergency healthcare support, and environmental conservation through tree plantation.",
       ctaDonate: "Make a Donation",
       ctaActivities: "Our Initiatives",
       ctaNotice: "Latest Notices & Classes",
       locationBadge: "Phulbari, Dinajpur, Bangladesh",
+      collaboratorBadge: "In collaboration with: Mononshil",
     },
     noticeBoard: {
       badge: "Announcements & Updates",
       title: "Active Notices & Educational Programs",
       subtitle: "Latest announcements regarding new class batches, scholarship information, and volunteer initiatives.",
       emptyState: "Currently there are no urgent notices. Regular classes and ongoing community programs are active.",
-      applyBtn: "Apply via Google Form",
+      applyBtn: "Apply & Details",
       viewDetails: "View Details",
       postedOn: "Published on:",
       sheetSyncStatus: "Live synced with Google Sheets",
@@ -218,8 +235,9 @@ export const translations = {
     about: {
       badge: "About Us",
       title: "A Dedicated Organization Serving Rural Humanity",
+      tagline: "Our Journey in Public Service",
       p1: "Janata-Deshbondhu Foundation is a non-political, non-profit humanitarian organization based in Phulbari, Dinajpur. It originated from a collective urge to stand beside disadvantaged rural students and protect the fundamental rights of marginalized people.",
-      p2: "Led and mentored by university scholars, medical students, and enthusiastic educators, we strive to unlock the true potential of rural youth and deliver compassionate service where it is needed most.",
+      p2: "Led and mentored by university scholars, medical students, and enthusiastic educators, we strive to unlock the true potential of rural youth and deliver compassionate service where it is needed most. We operate in active collaboration with social platform 'Mononshil'.",
       pillarsTitle: "Our Core Pillars",
       pillars: [
         {
@@ -259,36 +277,42 @@ export const translations = {
           id: 1,
           title: "Free English & Mathematics Foundation Classes",
           category: "Education",
+          image: "/images/activity-3.jpeg",
           desc: "Systematic remedial classes conducted by university scholars to eliminate fear of core academic subjects."
         },
         {
           id: 2,
           title: "Job Fair & Career Orientation",
           category: "Youth Empowerment",
+          image: "/images/activity-20.jpeg",
           desc: "Career pathways and employment readiness orientation organized in Birampur & Phulbari colleges."
         },
         {
           id: 3,
           title: "National Scholarship Guidance",
           category: "Scholarship",
+          image: "/images/activity-14.jpeg",
           desc: "Guidance and application support for prestigious scholarships such as BIFFL and CZM Genius Program."
         },
         {
           id: 4,
           title: "Tree Plantation & Eco Restoration",
           category: "Environment",
+          image: "/images/activity-31.jpeg",
           desc: "Planting native trees in academic campuses and community roadside belts to protect green cover."
         },
         {
           id: 5,
           title: "Relief & Humanitarian Aid",
           category: "Relief",
+          image: "/images/activity-2.jpeg",
           desc: "Distributing warm clothing in chilly winter, emergency medical help, and urgent disaster assistance."
         },
         {
           id: 6,
           title: "Digital Literacy & AI Skill Orientation",
           category: "Skill Development",
+          image: "/images/activity-22.jpeg",
           desc: "Introducing rural youngsters to computer literacy and digital career avenues."
         }
       ]
@@ -296,11 +320,11 @@ export const translations = {
     gallery: {
       badge: "Photo Album",
       title: "Field Action in Pictures",
-      subtitle: "Memorable moments from our classroom sessions and community programs.",
+      subtitle: "Memorable moments from our classroom sessions and community programs in Dinajpur.",
       all: "All Photos",
       education: "Education Sessions",
       plantation: "Tree Plantation",
-      events: "Youth & Community Events",
+      events: "Events & Meetings",
     },
     donation: {
       badge: "Support Our Cause",
@@ -309,29 +333,33 @@ export const translations = {
       trustPledge: "We are committed to full accountability and transparent utilization of every contribution.",
       copyBtn: "Copy Number",
       copied: "Number Copied!",
-      qrBtn: "View QR Code",
+      qrBtn: "View Poster & Channels",
+      posterBtn: "Official Poster",
       closeQr: "Close",
-      sendGuideTitle: "How to send your donation:",
+      sendGuideTitle: "How to send your donation (As per official directive):",
       steps: [
         "Open your bKash, Nagad, or Rocket mobile app and choose 'Send Money'.",
         "Enter the designated mobile account number with your desired contribution amount.",
         "Include your name or 'Education/Donation' in the reference field.",
-        "After sending, share a quick confirmation with the transaction ID on our WhatsApp so we can acknowledge and issue a receipt."
+        "After sending, share a quick confirmation with the transaction ID/screenshot on WhatsApp so we can acknowledge and maintain transparent accounting."
       ],
       accounts: {
         bkash: {
           title: "bKash (Personal)",
-          number: "017XXXXXXXX",
+          recipient: "Chitra Roy",
+          number: "01786743802",
           type: "Personal Send Money"
         },
         nagad: {
           title: "Nagad (Personal)",
-          number: "017XXXXXXXX",
+          recipient: "Bikash Chandra",
+          number: "01814086362",
           type: "Personal Send Money"
         },
         rocket: {
-          title: "Rocket (Personal)",
-          number: "017XXXXXXXX-X",
+          title: "Rocket / Helpline",
+          recipient: "Md Jahangir Alom",
+          number: "01780555732",
           type: "Personal Send Money"
         },
         bank: {
@@ -356,13 +384,15 @@ export const translations = {
       addressTitle: "Address & Location",
       addressText: "Phulbari, Dinajpur, Rangpur Division, Bangladesh",
       phoneTitle: "Emergency Helpline",
-      phoneText: "+88017XXXXXXXX",
+      phoneText: "+8801786743802, +8801814086362",
+      phoneSecondary: "+8801780555732",
       emailTitle: "Email Address",
       emailText: "janatadeshbondhu@gmail.com",
     },
     footer: {
       orgName: "Janata-Deshbondhu Foundation",
-      tagline: "A dependable grassroots humanitarian organization empowering rural communities.",
+      tagline: "Our Journey in Public Welfare — A dependable grassroots humanitarian organization empowering rural communities.",
+      motto: "Let the light of honesty spread everywhere. A modest endeavor to uplift marginalized communities.",
       quickLinks: "Quick Navigation",
       legal: "Non-political & Non-profit Charity Organization",
       rights: "All Rights Reserved.",

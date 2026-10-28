@@ -12,7 +12,9 @@ import {
   Smartphone, 
   ShieldCheck, 
   HelpCircle,
-  ArrowRight
+  ArrowRight,
+  FileImage,
+  UserCheck
 } from 'lucide-react';
 
 export const DonationHub = () => {
@@ -44,6 +46,7 @@ export const DonationHub = () => {
       key: 'bkash',
       name: isBn ? 'বিকাশ' : 'bKash',
       badge: isBn ? 'পার্সোনাল' : 'Personal',
+      recipient: isBn ? foundationConfig.donationAccounts.bkash.recipientBn : foundationConfig.donationAccounts.bkash.recipientEn,
       number: foundationConfig.donationAccounts.bkash.number,
       type: isBn ? 'Send Money (পার্সোনাল)' : 'Send Money (Personal)',
       qrImage: foundationConfig.donationAccounts.bkash.qrImage,
@@ -54,6 +57,7 @@ export const DonationHub = () => {
       key: 'nagad',
       name: isBn ? 'নগদ' : 'Nagad',
       badge: isBn ? 'পার্সোনাল' : 'Personal',
+      recipient: isBn ? foundationConfig.donationAccounts.nagad.recipientBn : foundationConfig.donationAccounts.nagad.recipientEn,
       number: foundationConfig.donationAccounts.nagad.number,
       type: isBn ? 'Send Money (পার্সোনাল)' : 'Send Money (Personal)',
       qrImage: foundationConfig.donationAccounts.nagad.qrImage,
@@ -62,8 +66,9 @@ export const DonationHub = () => {
     },
     {
       key: 'rocket',
-      name: isBn ? 'রকেট' : 'Rocket',
+      name: isBn ? 'রকেট / হেল্পলাইন' : 'Rocket / Helpline',
       badge: isBn ? 'পার্সোনাল' : 'Personal',
+      recipient: isBn ? foundationConfig.donationAccounts.rocket.recipientBn : foundationConfig.donationAccounts.rocket.recipientEn,
       number: foundationConfig.donationAccounts.rocket.number,
       type: isBn ? 'Send Money (পার্সোনাল)' : 'Send Money (Personal)',
       qrImage: foundationConfig.donationAccounts.rocket.qrImage,
@@ -75,7 +80,7 @@ export const DonationHub = () => {
   const bank = foundationConfig.donationAccounts.bank;
 
   return (
-    <section id="donate" className="py-20 md:py-28 bg-white relative">
+    <section id="donate" className="py-20 md:py-28 bg-white relative scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -106,11 +111,11 @@ export const DonationHub = () => {
             return (
               <div
                 key={acc.key}
-                className={`rounded-2xl border border-stone-200 bg-stone-50/60 p-6 flex flex-col justify-between shadow-xs transition-all duration-200 ${acc.accentBorder} hover:shadow-md hover:bg-white`}
+                className={`rounded-2xl border border-stone-200 bg-stone-50/60 p-6 flex flex-col justify-between shadow-xs transition-all duration-200 ${acc.accentBorder} hover:shadow-lg hover:bg-white`}
               >
                 <div>
                   {/* Account Type Header */}
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
                       <div className="w-9 h-9 rounded-lg bg-white border border-stone-200 flex items-center justify-center">
                         <Smartphone className="w-5 h-5 text-slate-700" />
@@ -122,11 +127,17 @@ export const DonationHub = () => {
                     </span>
                   </div>
 
+                  {/* Recipient Representative Name */}
+                  <div className="flex items-center gap-1.5 text-xs text-stone-600 font-medium mb-3">
+                    <UserCheck className="w-3.5 h-3.5 text-brand-700" />
+                    <span>{isBn ? `প্রাপক: ${acc.recipient}` : `Account: ${acc.recipient}`}</span>
+                  </div>
+
                   <p className="text-xs text-stone-500 mb-3">{acc.type}</p>
 
                   {/* Account Number Box */}
                   <div className="bg-white border border-stone-200 rounded-xl p-3 flex items-center justify-between mb-4">
-                    <span className="font-mono font-bold text-slate-900 text-base tracking-wider">
+                    <span className="font-mono font-bold text-slate-900 text-lg tracking-wider">
                       {acc.number}
                     </span>
                     <button
@@ -148,7 +159,7 @@ export const DonationHub = () => {
                   </div>
                 </div>
 
-                {/* Actions: Copy & QR */}
+                {/* Actions: Copy & Official Poster */}
                 <div className="flex items-center gap-2 pt-2">
                   <button
                     onClick={() => copyToClipboard(acc.number, acc.key)}
@@ -174,10 +185,10 @@ export const DonationHub = () => {
                   <button
                     onClick={() => openQr(acc.name, acc.qrImage, acc.number)}
                     className="py-2.5 px-3 rounded-xl border border-stone-300 hover:border-brand-500 bg-white text-stone-700 hover:text-brand-700 font-medium text-xs sm:text-sm flex items-center justify-center gap-1 transition-colors"
-                    title={t.qrBtn}
+                    title={t.posterBtn}
                   >
-                    <QrCode className="w-4 h-4" />
-                    <span className="hidden sm:inline">{t.qrBtn}</span>
+                    <FileImage className="w-4 h-4" />
+                    <span className="hidden sm:inline">{t.posterBtn}</span>
                   </button>
                 </div>
               </div>
@@ -287,14 +298,14 @@ export const DonationHub = () => {
             <a
               href={`https://wa.me/${foundationConfig.whatsapp}?text=${encodeURIComponent(
                 isBn
-                  ? 'আসসালামু আলাইকুম। আমি জনতা-দেশবন্ধু ফাউন্ডেশনে একটি অনুদান পাঠিয়েছি। ট্রানজেকশন আইডি: '
+                  ? 'আসসালামু আলাইকুম। আমি জনতা-দেশবন্ধু ফাউন্ডেশনে অনুদান পাঠিয়েছি। ট্রানজেকশন আইডি: '
                   : 'Greetings. I have sent a donation to Janata-Deshbondhu Foundation. Transaction ID: '
               )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-brand-800 hover:text-brand-950 underline underline-offset-4"
             >
-              <span>{isBn ? 'অনুদান পাঠানোর পর WhatsApp-এ নিশ্চিত করুন' : 'Confirm your transaction via WhatsApp'}</span>
+              <span>{isBn ? 'অনুদান পাঠানোর পর WhatsApp-এ নিশ্চিত করুন ও রসিদ নিন' : 'Confirm your transaction via WhatsApp'}</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
@@ -302,11 +313,11 @@ export const DonationHub = () => {
 
       </div>
 
-      {/* QR Code Modal */}
+      {/* Official Poster / QR Modal */}
       <QRCodeModal
         isOpen={qrModal.isOpen}
         onClose={() => setQrModal({ ...qrModal, isOpen: false })}
-        title={qrModal.title}
+        title={isBn ? `${qrModal.title} - অফিসিয়াল চ্যানেল` : `${qrModal.title} - Official Channel`}
         qrImage={qrModal.qrImage}
         number={qrModal.number}
         isBn={isBn}

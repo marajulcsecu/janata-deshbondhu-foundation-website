@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
-import { GraduationCap, HeartPulse, Trees, Compass, CheckCircle2 } from 'lucide-react';
+import { GraduationCap, HeartPulse, Trees, Compass, CheckCircle2, Award } from 'lucide-react';
 
 export const About = () => {
   const { lang, isBn } = useLanguage();
@@ -15,34 +15,43 @@ export const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 md:py-28 bg-stone-50">
+    <section id="about" className="py-20 md:py-28 bg-stone-50 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Grid: Narrative & Vision */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
           
-          {/* Left Column: Image collage or primary feature photo */}
+          {/* Left Column: Real photo with official foundation banner */}
           <div className="lg:col-span-5 order-2 lg:order-1">
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-lg border border-stone-200 aspect-[4/3]">
                 <img
-                  src="/images/activity-4.jpeg"
-                  alt="Janata Deshbondhu Foundation Mentors with Students"
-                  className="w-full h-full object-cover"
+                  src="/images/activity-30.jpeg"
+                  alt="Janata Deshbondhu Foundation Official Banner and Volunteer Team"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   loading="lazy"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-3 left-3 right-3 text-white">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-emerald-300">
+                    {isBn ? 'জনকল্যাণে আমাদের পথচলা' : 'Our Grassroots Journey'}
+                  </p>
+                  <p className="text-sm font-bold">
+                    {isBn ? 'ফুলবাড়ী ও দিনাজপুরে নিবেদিত স্বেচ্ছাসেবী দল' : 'Dedicated Volunteer Team in Phulbari'}
+                  </p>
+                </div>
               </div>
 
               {/* Smaller overlay card */}
               <div className="mt-4 p-4 rounded-xl bg-white border border-stone-200 shadow-sm">
                 <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
+                  <Award className="w-5 h-5 text-brand-600 shrink-0 mt-0.5" />
                   <div>
                     <h4 className="text-sm font-bold text-slate-900">
-                      {isBn ? 'মেধাবী শিক্ষার্থীদের সম্মিলিত উদ্যোগ' : 'Scholars Supporting Scholars'}
+                      {isBn ? 'সহযোগিতায়: সামাজিক প্ল্যাটফর্ম মননশীল' : 'In Collaboration with Mononshil'}
                     </h4>
-                    <p className="text-xs text-stone-600 mt-0.5">
-                      {isBn ? 'দিনাজপুরের প্রত্যন্ত অঞ্চলে শিক্ষা ও সামাজিক পরিবর্তনের প্রতিশ্রুতি।' : 'Driving grassroots transformation in rural Dinajpur.'}
+                    <p className="text-xs text-stone-600 mt-0.5 leading-relaxed">
+                      {isBn ? 'দিনাজপুরের প্রত্যন্ত অঞ্চলে শিক্ষা ও সামাজিক পরিবর্তনের প্রতিশ্রুতি।' : 'Driving educational and humanitarian transformation in rural Dinajpur.'}
                     </p>
                   </div>
                 </div>

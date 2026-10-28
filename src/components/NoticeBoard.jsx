@@ -28,7 +28,7 @@ export const NoticeBoard = () => {
   }, []);
 
   return (
-    <section id="notices" className="py-16 md:py-20 bg-white border-y border-stone-200/70">
+    <section id="notices" className="py-16 md:py-20 bg-white border-y border-stone-200/70 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -102,7 +102,7 @@ export const NoticeBoard = () => {
                     </p>
                   </div>
 
-                  {/* Action Link (e.g. Google Form) */}
+                  {/* Action Link (e.g. Google Form or Facebook Link) */}
                   {notice.formLink && (
                     <div className="mt-6 pt-4 border-t border-stone-200/70">
                       <a

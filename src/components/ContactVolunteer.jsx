@@ -10,7 +10,8 @@ import {
   Share2, 
   Users, 
   HeartHandshake,
-  ExternalLink 
+  ExternalLink,
+  Sparkles
 } from 'lucide-react';
 
 export const ContactVolunteer = () => {
@@ -22,7 +23,7 @@ export const ContactVolunteer = () => {
   )}`;
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-stone-50 border-t border-stone-200">
+    <section id="contact" className="py-20 md:py-28 bg-stone-50 border-t border-stone-200 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -43,7 +44,7 @@ export const ContactVolunteer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
           {/* Left Column: Direct Communication Buttons */}
-          <div className="lg:col-span-7 bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm">
+          <div className="lg:col-span-7 bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-xs">
             <h3 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
               <Users className="w-5 h-5 text-brand-700" />
               <span>{isBn ? 'সরাসরি যোগাযোগ ও ভলান্টিয়ার টিম' : 'Direct Connect & Volunteer Team'}</span>
@@ -63,7 +64,7 @@ export const ContactVolunteer = () => {
                   </div>
                   <div className="text-left">
                     <div className="text-sm font-bold">{t.whatsappBtn}</div>
-                    <div className="text-xs text-emerald-100">{isBn ? 'ইনস্ট্যান্ট মেসেজ ও সহায়তা' : 'Instant chat & query'}</div>
+                    <div className="text-xs text-emerald-100">{isBn ? 'ইনস্ট্যান্ট মেসেজ ও সহায়তা (+৮৮০১৭৮৬৭৪৩৮০২)' : 'Instant chat & query (+8801786743802)'}</div>
                   </div>
                 </div>
                 <ExternalLink className="w-4 h-4 text-emerald-200" />
@@ -80,7 +81,7 @@ export const ContactVolunteer = () => {
                   </div>
                   <div className="text-left">
                     <div className="text-sm font-bold">{t.callBtn}</div>
-                    <div className="text-xs text-slate-300">{isBn ? 'সরাসরি কথা বলুন' : 'Call our coordinator'}</div>
+                    <div className="text-xs text-slate-300">{isBn ? 'সরাসরি কথা বলুন: ০১৭৮৬৭৪৩৮০২' : 'Direct call: 01786743802'}</div>
                   </div>
                 </div>
                 <ExternalLink className="w-4 h-4 text-slate-400" />
@@ -99,19 +100,25 @@ export const ContactVolunteer = () => {
                   </div>
                   <div className="text-left">
                     <div className="text-sm font-bold">{t.facebookBtn}</div>
-                    <div className="text-xs text-blue-100">{isBn ? 'প্রতিদিনের কাজের আপডেট ও পোস্ট' : 'Daily updates & stories'}</div>
+                    <div className="text-xs text-blue-100">{isBn ? 'প্রতিদিনের কাজের আপডেট ও ইভেন্ট' : 'Daily updates & events'}</div>
                   </div>
                 </div>
                 <ExternalLink className="w-4 h-4 text-blue-200" />
               </a>
             </div>
 
-            {/* Note on Joining */}
-            <div className="mt-8 p-4 rounded-xl bg-brand-50/60 border border-brand-200/70 text-xs sm:text-sm text-brand-900 leading-relaxed">
-              <strong>{isBn ? 'ভলান্টিয়ার হতে চান?' : 'Want to volunteer?'}</strong>{' '}
-              {isBn
-                ? 'আপনি যদি দিনাজপুর বা ফুলবাড়ী অঞ্চলের সন্তান হয়ে থাকেন এবং সুবিধাবঞ্চিত শিশুদের পড়াতে বা সামাজিক কাজে সময় দিতে আগ্রহী হন, তবে সরাসরি WhatsApp-এ বার্তা দিন।'
-                : 'If you are from Dinajpur/Phulbari and wish to mentor rural children or contribute your skills, kindly message us via WhatsApp.'}
+            {/* Note on Joining & Collaborator */}
+            <div className="mt-8 p-4 rounded-xl bg-brand-50/70 border border-brand-200/80 text-xs sm:text-sm text-brand-900 leading-relaxed space-y-2">
+              <div className="flex items-center gap-1.5 font-bold text-amber-900">
+                <Sparkles className="w-4 h-4 text-amber-600" />
+                <span>{isBn ? 'সহযোগিতায়: সামাজিক উদ্যোগ মননশীল' : 'In Collaboration with Mononshil'}</span>
+              </div>
+              <p>
+                <strong>{isBn ? 'ভলান্টিয়ার হতে চান?' : 'Want to volunteer?'}</strong>{' '}
+                {isBn
+                  ? 'আপনি যদি দিনাজপুর বা ফুলবাড়ী অঞ্চলের সন্তান হয়ে থাকেন এবং সুবিধাবঞ্চিত শিশুদের পড়াতে বা সামাজিক কাজে সময় দিতে আগ্রহী হন, তবে সরাসরি WhatsApp-এ বার্তা দিন।'
+                  : 'If you are from Dinajpur/Phulbari and wish to mentor rural children or contribute your skills, kindly message us via WhatsApp.'}
+              </p>
             </div>
           </div>
 
@@ -141,8 +148,11 @@ export const ContactVolunteer = () => {
                 <h4 className="text-sm font-bold text-slate-900 mb-1">
                   {t.phoneTitle}
                 </h4>
-                <p className="text-xs sm:text-sm text-stone-600 font-mono">
+                <p className="text-xs sm:text-sm text-stone-700 font-mono font-medium">
                   {t.phoneText}
+                </p>
+                <p className="text-xs text-stone-500 font-mono mt-0.5">
+                  {isBn ? `অন্যান্য: ${t.phoneSecondary}` : `Alternative: ${t.phoneSecondary}`}
                 </p>
               </div>
             </div>

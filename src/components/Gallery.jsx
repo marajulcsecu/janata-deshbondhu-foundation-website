@@ -3,7 +3,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
 import { foundationConfig } from '../data/foundationData';
 import { ImageLightboxModal } from './ImageLightboxModal';
-import { Camera, Maximize2, Layers } from 'lucide-react';
+import { Camera, Maximize2 } from 'lucide-react';
 
 export const Gallery = () => {
   const { lang, isBn } = useLanguage();
@@ -38,7 +38,7 @@ export const Gallery = () => {
   };
 
   return (
-    <section id="gallery" className="py-20 md:py-28 bg-stone-50 border-t border-stone-200">
+    <section id="gallery" className="py-20 md:py-28 bg-stone-50 border-t border-stone-200 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -61,7 +61,7 @@ export const Gallery = () => {
             onClick={() => setActiveFilter('all')}
             className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 ${
               activeFilter === 'all'
-                ? 'bg-brand-700 text-white shadow-sm'
+                ? 'bg-brand-700 text-white shadow-xs'
                 : 'bg-white text-stone-700 border border-stone-300 hover:border-brand-500'
             }`}
           >
@@ -71,31 +71,31 @@ export const Gallery = () => {
             onClick={() => setActiveFilter('education')}
             className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 ${
               activeFilter === 'education'
-                ? 'bg-brand-700 text-white shadow-sm'
+                ? 'bg-brand-700 text-white shadow-xs'
                 : 'bg-white text-stone-700 border border-stone-300 hover:border-brand-500'
             }`}
           >
             {t.education}
           </button>
           <button
-            onClick={() => setActiveFilter('events')}
-            className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 ${
-              activeFilter === 'events'
-                ? 'bg-brand-700 text-white shadow-sm'
-                : 'bg-white text-stone-700 border border-stone-300 hover:border-brand-500'
-            }`}
-          >
-            {t.events}
-          </button>
-          <button
             onClick={() => setActiveFilter('plantation')}
             className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 ${
               activeFilter === 'plantation'
-                ? 'bg-brand-700 text-white shadow-sm'
+                ? 'bg-brand-700 text-white shadow-xs'
                 : 'bg-white text-stone-700 border border-stone-300 hover:border-brand-500'
             }`}
           >
             {t.plantation}
+          </button>
+          <button
+            onClick={() => setActiveFilter('events')}
+            className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 ${
+              activeFilter === 'events'
+                ? 'bg-brand-700 text-white shadow-xs'
+                : 'bg-white text-stone-700 border border-stone-300 hover:border-brand-500'
+            }`}
+          >
+            {t.events}
           </button>
         </div>
 
@@ -108,7 +108,7 @@ export const Gallery = () => {
               <div
                 key={img.id}
                 onClick={() => openLightbox(index)}
-                className="group relative rounded-2xl overflow-hidden bg-stone-200 aspect-[4/3] cursor-pointer shadow-sm hover:shadow-xl transition-all duration-300 border border-stone-200/80"
+                className="group relative rounded-2xl overflow-hidden bg-stone-200 aspect-[4/3] cursor-pointer shadow-xs hover:shadow-xl transition-all duration-300 border border-stone-200/80"
               >
                 <img
                   src={img.src}
@@ -118,7 +118,7 @@ export const Gallery = () => {
                 />
 
                 {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
                   <div className="flex items-center justify-between">
                     <p className="text-xs sm:text-sm font-semibold leading-snug pr-2">
                       {title}

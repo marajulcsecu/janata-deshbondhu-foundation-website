@@ -1,14 +1,14 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
-import { MapPin, Heart, BookOpen, ArrowRight, ShieldCheck, Users } from 'lucide-react';
+import { MapPin, Heart, BookOpen, ArrowRight, ShieldCheck, Users, Sparkles } from 'lucide-react';
 
 export const Hero = () => {
   const { lang, isBn } = useLanguage();
   const t = translations[lang].hero;
 
   return (
-    <section id="home" className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-gradient-to-b from-brand-50/60 via-stone-50 to-stone-50">
+    <section id="home" className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-gradient-to-b from-brand-50/60 via-stone-50 to-stone-50 scroll-mt-20">
       {/* Decorative subtle background shapes */}
       <div className="absolute top-0 right-0 -mr-24 -mt-24 w-96 h-96 rounded-full bg-brand-100/50 blur-3xl pointer-events-none" />
       <div className="absolute top-1/2 left-0 -ml-24 w-72 h-72 rounded-full bg-amber-100/40 blur-2xl pointer-events-none" />
@@ -18,11 +18,18 @@ export const Hero = () => {
           
           {/* Left Column: Mission & CTAs */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            {/* Location & Status Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-stone-200/90 shadow-sm text-stone-700 text-xs sm:text-sm font-medium">
-              <span className="w-2 h-2 rounded-full bg-brand-600 animate-pulse" />
-              <MapPin className="w-3.5 h-3.5 text-brand-700" />
-              <span>{t.locationBadge}</span>
+            {/* Location & Collaborator Badges */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-stone-200/90 shadow-xs text-stone-700 text-xs sm:text-sm font-medium">
+                <span className="w-2 h-2 rounded-full bg-brand-600 animate-pulse" />
+                <MapPin className="w-3.5 h-3.5 text-brand-700" />
+                <span>{t.locationBadge}</span>
+              </div>
+
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-200/80 text-amber-900 text-xs font-semibold">
+                <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                <span>{t.collaboratorBadge}</span>
+              </div>
             </div>
 
             {/* Main Headline */}
@@ -37,6 +44,11 @@ export const Hero = () => {
               <br />
               <span className="text-slate-800">{t.titleEnd}</span>
             </h1>
+
+            {/* Official Banner Motto */}
+            <blockquote className="p-3.5 rounded-xl bg-white/80 border-l-4 border-brand-600 shadow-xs text-xs sm:text-sm font-medium text-stone-700 italic leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              {t.motto}
+            </blockquote>
 
             {/* Subtitle */}
             <p className="text-stone-600 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
@@ -82,7 +94,7 @@ export const Hero = () => {
               </div>
               <div className="flex items-center gap-1.5">
                 <Users className="w-4 h-4 text-brand-600" />
-                <span>{isBn ? 'মেধাবী শিক্ষার্থীদের মেন্টরশিপ' : 'Mentored by University Scholars'}</span>
+                <span>{isBn ? 'বিশ্ববিদ্যালয় শিক্ষার্থীদের মেন্টরশিপ' : 'Mentored by University Scholars'}</span>
               </div>
             </div>
           </div>
@@ -94,7 +106,7 @@ export const Hero = () => {
               <div className="absolute -inset-2 rounded-2xl bg-gradient-to-tr from-brand-600/20 to-amber-500/20 blur-lg -z-10" />
 
               {/* Main Image Container */}
-              <div className="relative rounded-2xl overflow-hidden border-4 border-white shadow-xl bg-stone-100 aspect-[4/3] sm:aspect-[4/3]">
+              <div className="relative rounded-2xl overflow-hidden border-4 border-white shadow-xl bg-stone-100 aspect-[4/3]">
                 <img
                   src="/images/activity-2.jpeg"
                   alt="Janata Deshbondhu Foundation Classroom Activities in Phulbari"
